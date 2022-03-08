@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%% Credit %%%%%%%%%%%%%%%%%%%%%%%%
+
+% template ini dibuat oleh martin.manullang@if.itera.ac.id untuk dipergunakan oleh seluruh sivitas akademik itera.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGE starts HERE %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{microtype}
+\captionsetup[table]{name=Tabel}
+\captionsetup[figure]{name=Gambar}
+\usepackage{tabulary}
+\usepackage{minted}
+% \usepackage{amsmath}
+\usepackage{fancyhdr}
+% \usepackage{amssymb}
+% \usepackage{amsthm}
+\usepackage{placeins}
+% \usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{psfrag}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+% Enable inserting code into the document
+\usepackage{listings}
+\usepackage{xcolor} 
+% custom color & style for listing
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{LightGray}{gray}{0.9}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{green},
+	keywordstyle=\color{codegreen},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\renewcommand{\lstlistingname}{Kode}
+%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGE ends HERE %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Data Diri %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\student}{\textbf{Paul White}}
+
+\newcommand{\assignment}{\textbf{xxx}}
+
+%%%%%%%%%%%%%%%%%%% using theorem style %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}%% a garbage package you don't need except to create examples.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Nama Mahasiswa di Header (Nim Mahasiswa di Header)}
+\rhead{ \thepage}
+\cfoot{\textbf{Judul Tugas diketik di sini}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%%%%%%%%%%%%%%  Shortcut for usual set of numbers  %%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\end{center}
+\noindent
+\rule{17cm}{0.2cm}\\[0.3cm]
+Name: \student 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BODY DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pokemon Data (Web scraped)}
+    This data set that I scraped from Serebii.com contains the stats for the strongest 300 Pokemon as of Sun and Moon, the 7$^{th}$ generation of main Pokemon entries, and the last game I played. Pokemon has been my favorite franchise since I was young, so I just wanted to play with data from there because of personal interest, and Serebii is my favorite reference site for Pokemon. I want to look at the correlation between base stat total and Pokedex number (which represents when the Pokemon was added, to an extent) to look at power creep, as well as individual Pokemon stat ranges to see how min/maxed their stats have become over time.
+
+\section{FRED data (From FRED API using fredr wrapper)}
+    I pulled data from FRED about the number of private establishments over time in Winnebago county, Illinois. This is because I am from Rockford, the main city within Winnebago county. The area has always been fairly poor, so I wanted to just look at some indicators. In 2020, there was a sharp decrease in private establishments, likely due to the impact of COVID 19.
+    
+
+\end{document}
