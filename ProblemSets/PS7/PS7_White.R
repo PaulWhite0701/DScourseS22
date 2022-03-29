@@ -12,7 +12,7 @@ modelform<-formula(logwage~hgc+college+tenure+I(tenure^2)+age+married)
 mods[['Complete']]<-lm(modelform, data = df[complete.cases(df[,1]),])
 
 df.meanimpute<- df
-df.meanimpute$logwage[is.na(df.meanimpute$logwage)]<- mean(df.meanimpute$logwage) 
+df.meanimpute$logwage[is.na(df.meanimpute$logwage)]<- mean(df.meanimpute$logwage, na.rm = TRUE) 
 mods[['Mean_Imputation']]<-lm(modelform, data = df.meanimpute)
 
 df.comp<-df[complete.cases(df[,2:6]),]
@@ -25,6 +25,6 @@ df.lmimpute<-rbind(df.na, df.nona)
 mods[['lm_Predicted']]<-lm(modelform,data = df.lmimpute)
 
 df_mice<-mice::mice(df,m=5,printFlag = FALSE)
-mods[['Mice']] <- with(df_mice$data,lm(logwage~hgc+college+tenure+I(tenure^2)+age+married))
+mods[['Mice']] <- with(df_mice, lm(logwage~hgc+college+tenure+I(tenure^2)+age+married))
 
-modelsummary::modelsummary(mods, output = "latex")
+modelsummary::modelsummary(mods, output = "default")
