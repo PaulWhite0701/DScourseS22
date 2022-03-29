@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\newcolumntype{d}{S[input-symbols = ()]}
+
+\title{PS7_White}
+\author{Paul White}
+\date{March 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Table 1}
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lrrrrrrr}
+\toprule
+  & Unique (\#) & Missing (\%) & Mean & SD & Min & Median & Max\\
+\midrule
+logwage & 670 & 25 & \num{1.6} & \num{0.4} & \num{0.0} & \num{1.7} & \num{2.3}\\
+hgc & 16 & 0 & \num{13.1} & \num{2.5} & \num{0.0} & \num{12.0} & \num{18.0}\\
+tenure & 259 & 0 & \num{6.0} & \num{5.5} & \num{0.0} & \num{3.8} & \num{25.9}\\
+age & 13 & 0 & \num{39.2} & \num{3.1} & \num{34.0} & \num{39.0} & \num{46.0}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Models}
+\begin{table}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & Complete & Mean\_Imputation & lm\_Predicted & Mice\\
+\midrule
+(Intercept) & \num{0.534} & \num{0.534} & \num{0.545} & \num{0.534}\\
+ & (\num{0.146}) & (\num{0.146}) & (\num{0.112}) & (\num{0.146})\\
+hgc & \num{0.062} & \num{0.062} & \num{0.062} & \num{0.062}\\
+ & (\num{0.005}) & (\num{0.005}) & (\num{0.004}) & \vphantom{1} (\num{0.005})\\
+collegenot college grad & \num{0.145} & \num{0.145} & \num{0.152} & \num{0.145}\\
+ & (\num{0.034}) & (\num{0.034}) & (\num{0.025}) & (\num{0.034})\\
+tenure & \num{0.050} & \num{0.050} & \num{0.041} & \num{0.050}\\
+ & (\num{0.005}) & (\num{0.005}) & (\num{0.004}) & (\num{0.005})\\
+I(tenure\textasciicircum2) & \num{-0.002} & \num{-0.002} & \num{-0.001} & \num{-0.002}\\
+ & (\num{0.000}) & (\num{0.000}) & (\num{0.000}) & (\num{0.000})\\
+age & \num{0.000} & \num{0.000} & \num{0.000} & \num{0.000}\\
+ & (\num{0.003}) & (\num{0.003}) & (\num{0.002}) & (\num{0.003})\\
+marriedsingle & \num{-0.022} & \num{-0.022} & \num{-0.022} & \num{-0.022}\\
+ & (\num{0.018}) & (\num{0.018}) & (\num{0.013}) & (\num{0.018})\\
+\midrule
+R2 & \num{0.208} & \num{0.208} & \num{0.276} & \num{0.208}\\
+R2 Adj. & \num{0.206} & \num{0.206} & \num{0.274} & \num{0.206}\\
+AIC & \num{1179.9} & \num{1179.9} & \num{939.4} & \num{1179.9}\\
+BIC & \num{1223.2} & \num{1223.2} & \num{985.0} & \num{1223.2}\\
+Log.Lik. & \num{-581.936} & \num{-581.936} & \num{-461.682} & \num{-581.936}\\
+F & \num{72.917} & \num{72.917} & \num{141.108} & \num{72.917}\\
+RMSE & \num{0.34} & \num{0.34} & \num{0.30} & \num{0.34}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Project Update}
+
+So far I've just been looking for DnD or Pokemon related API's, because I haven't ever really gotten the chance to play with data from things I really enjoy, so I want to try and work with one of those. It's been slow going trying to find anything in that vein so far, though.
+
+\end{document}
