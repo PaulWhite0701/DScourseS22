@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\newcolumntype{d}{S[input-symbols = ()]}
+
+\title{PS8 White}
+\author{Paul White}
+\date{April 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{OLS Model Table}
+
+The models all returned values that were actually quite close to the "ground truth" established earlier in the problem set. However, the MLE method, actually gave the values out in the "wrong" order, based on how they were initialized. The other models generated betas very similar to the initialized ones, with very little error in their results. 
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lc}
+\toprule
+  & Model 1\\
+\midrule
+Xcol1 & \num{1.499}\\
+ & \vphantom{9} (\num{0.002})\\
+Xcol2 & \num{-1.001}\\
+ & \vphantom{8} (\num{0.002})\\
+Xcol3 & \num{-0.251}\\
+ & \vphantom{7} (\num{0.002})\\
+Xcol4 & \num{0.753}\\
+ & \vphantom{6} (\num{0.002})\\
+Xcol5 & \num{3.501}\\
+ & \vphantom{5} (\num{0.002})\\
+Xcol6 & \num{-2.000}\\
+ & \vphantom{4} (\num{0.002})\\
+Xcol7 & \num{0.501}\\
+ & \vphantom{3} (\num{0.002})\\
+Xcol8 & \num{0.999}\\
+ & \vphantom{2} (\num{0.002})\\
+Xcol9 & \num{1.250}\\
+ & \vphantom{1} (\num{0.002})\\
+Xcol10 & \num{1.998}\\
+ & (\num{0.002})\\
+\midrule
+R2 & \num{0.991}\\
+R2 Adj. & \num{0.991}\\
+AIC & \num{145410.3}\\
+BIC & \num{145514.9}\\
+Log.Lik. & \num{-72694.134}\\
+F & \num{1072204.495}\\
+RMSE & \num{0.50}\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{document}
