@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS9 White}
+\author{Paul White}
+\date{April 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{LASSO Results}
+
+The optimal value of $\lambda$ is .000869. This is from an in sample RMSE of .0714. The resultant out of sample RMSE is .170.
+
+\section{Ridge Results}
+
+The optimal value of $\lambda$ is .0233. The in sample RMSE that yielded this was .0699. The out of sample RMSE is .173.
+
+
+You would not be able to run a linear regression with more columns than rows, as there would be more terms than data rows. 
+
+
+The models are likely somewhat overfit. They used the entire set of variables and have around twice the RMSE.
+
+\end{document}
