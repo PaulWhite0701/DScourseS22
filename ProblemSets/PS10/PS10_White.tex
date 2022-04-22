@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS10 White}
+\author{Paul White}
+\date{April 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Some models failed to load due to issue with packages or hardware (igraph in knn, svm overloading processor cores).
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lllllll}
+\toprule
+penalty & .estimate & alg & cost_complexity & tree_depth & min_n & hidden_units\\
+\midrule
+0.00 & 0.85 & logit &  &  &  & \\
+ & 0.87 & tree & 0.00 & 15.00 & 10.00 & \\
+0.08 & 0.81 & nnet &  &  &  & 5.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
